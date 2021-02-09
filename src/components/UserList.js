@@ -29,6 +29,26 @@ const UserList = ({ users }) => {
     document.querySelector("#name").value = "";
     document.querySelector("#lastname").value = "";
   };
+  
+  //funcion para eliminar el elemento del arreglo
+  const handleDeleteUser = (event) => {
+    // console.log("event", event);
+    const index = usersList.length;
+    console.log(index);
+    console.log(usersList[index]);
+
+    setUsersList((newArray) => {
+      
+      newArray.pop();
+      
+      return [...newArray];
+    });
+    
+    document.querySelector("#name").value = "";
+    document.querySelector("#lastname").value = "";
+
+    
+  };
 
   return (
     <>
